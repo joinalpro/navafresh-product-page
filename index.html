@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper slide cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- fontawesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/abe88cc625.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #5a8018;
+        --font-lato: "Lato", sans-serif;
+      }
+      .linear {
+        @apply bg-linear-to-r from-[#92b65a] to-[#5a8018] bg-clip-text text-transparent;
+      }
+    </style>
+  </head>
+  <body class="font-lato">
+    <header>
+      <nav>
+        <!-- top bar -->
+        <section class="bg-black py-2 hidden lg:flex">
+          <div
+            class="container mx-auto px-4 lg:px-0 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-10">
+              <p class="text-white font-bold">+0134524674</p>
+              <p class="text-white font-bold">contact@navafresh.com</p>
+              <ul class="flex gap-10 text-sm font-bold text-gray-400">
+                <a href="">Track Your Order</a>
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+              </ul>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="flex gap-1">
+                <div class="bg-green-500 size-5">
+                  <span class="flex items-center justify-center h-full">
+                    <i class="fa-solid fa-star text-white text-xs"></i>
+                  </span>
+                </div>
+                <div class="bg-green-500 size-5">
+                  <span class="flex items-center justify-center h-full">
+                    <i class="fa-solid fa-star text-white text-xs"></i>
+                  </span>
+                </div>
+                <div class="bg-green-500 size-5">
+                  <span class="flex items-center justify-center h-full">
+                    <i class="fa-solid fa-star text-white text-xs"></i>
+                  </span>
+                </div>
+                <div class="bg-green-500 size-5">
+                  <span class="flex items-center justify-center h-full">
+                    <i class="fa-solid fa-star text-white text-xs"></i>
+                  </span>
+                </div>
+                <div class="bg-green-500 size-5">
+                  <span class="flex items-center justify-center h-full">
+                    <i
+                      class="fa-solid fa-star-half-stroke text-white text-xs"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+              <p class="text-gray-400">4.3 out of 5 700 reviews</p>
+            </div>
+          </div>
+        </section>
+        <!-- main navbar -->
+        <section>
+          <div class="container mx-auto px-4 lg:px-0 py-4">
+            <div class="flex items-center justify-between">
+              <h1 class="linear text-3xl font-bold truncate">navafresh.</h1>
+              <div class="hidden md:flex">
+                <input
+                  class="outline-0 focus:border-primary truncate lg:w-sm border-gray-200 py-2 px-4 focus:border-2 border border-r-0 rounded-l-md"
+                  type="search"
+                  placeholder="What are you looking for?"
+                />
+                <button
+                  class="bg-primary cursor-pointer flex items-center text-lg gap-3 text-white px-6 py-2 rounded-r-md"
+                >
+                  <i class="fa-solid fa-magnifying-glass text-sm mt-1"></i>
+                  Search
+                </button>
+              </div>
+              <div class="flex items-center gap-4">
+                <i class="fa-regular fa-heart md:text-xl text-gray-500"></i>
+                <i class="fa-solid fa-user-tie md:text-xl text-gray-500"></i>
+                <i
+                  class="fa-solid fa-cart-shopping md:text-lg text-gray-500"
+                ></i>
+                <div class="md:hidden relative group">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <div
+                    class="flex fixed left-2 scale-y-0 group-hover:scale-y-100 group-hover:top-20 duration-500 group-hover:opacity-100 -top-[100%] opacity-0"
+                  >
+                    <input
+                      class="outline-0 focus:border-primary truncate border-gray-200 py-1 px-2 focus:border-2 border border-r-0 rounded-l-md"
+                      type="search"
+                      placeholder="What are you looking for?"
+                    />
+                    <button
+                      class="bg-primary cursor-pointer flex items-center text-lg font-medium gap-3 text-white px-4 py-1 rounded-r-md"
+                    >
+                      <i class="fa-solid fa-magnifying-glass text-sm mt-1"></i>
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="text-gray-300" />
+        </section>
+      </nav>
+    </header>
+    <!-- main section -->
+    <main>
+      <section class="max-w-6xl mx-auto px-4 lg:px-0 mt-16">
+        <div class="lg:flex gap-12 space-y-8 lg:space-y-0">
+          <div class="flex items-center gap-8 mx-auto lg:mx-0 max-w-lg">
+            <button id="swiperPrev" class="text-2xl text-gray-500">
+              &#8594;
+            </button>
+            <div class="swiper max-w-sm rounded-full">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide cursor-pointer">
+                  <img src="./assets/drink1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide cursor-pointer">
+                  <img src="./assets/drink2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide cursor-pointer">
+                  <img src="./assets/drink3.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- Custom Buttons -->
+            <button id="swiperNext" class="text-2xl text-gray-500">
+              &#8592;
+            </button>
+          </div>
+          <div class="space-y-4">
+            <div class="space-y-1">
+              <h5 class="font-semibold text-primary">QUAD LOCK</h5>
+              <p class="font-bold">Quad Lock Sports Armband</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div>
+                <i class="fa-solid fa-star text-primary text-sm"></i>
+                <i class="fa-solid fa-star text-primary text-sm"></i>
+                <i class="fa-solid fa-star text-primary text-sm"></i>
+                <i class="fa-solid fa-star text-primary text-sm"></i>
+                <i class="fa-regular fa-star text-primary text-sm"></i>
+              </div>
+              <p class="font-bold">4.0</p>
+            </div>
+            <div class="flex items-center gap-4 justify-between">
+              <h1>
+                <span class="text-xl font-bold text-primary">$49.00 </span>
+                <span class="text-gray-400"> $75.00</span>
+              </h1>
+              <span class="font-bold"> Save 12.0%($ 26.00) </span>
+            </div>
+            <div class="flex md:items-center mt-5 gap-6">
+              <div class="space-x-6">
+                <span
+                  class="border border-gray-300 rounded space-x-4 px-4 py-2 bg-[#f1f1f1]"
+                >
+                  <i
+                    class="fa-solid fa-minus text-primary cursor-not-allowed"
+                  ></i>
+                  <span
+                    class="border px-10 border-gray-300 py-2 font-semibold bg-white"
+                    >1</span
+                  >
+                  <i class="fa-solid fa-plus cursor-pointer text-primary"></i>
+                </span>
+                <button
+                  class="py-2 mt-6 cursor-pointer md:mt-0 px-6 bg-primary text-white rounded text-lg font-medium"
+                >
+                  Add To Cart
+                </button>
+              </div>
+              <div
+                class="size-10 border cursor-pointer border-gray-300 bg-[#f1f1f1] rounded"
+              >
+                <span class="flex items-center justify-center h-full">
+                  <i class="fa-regular fa-heart text-xl"></i>
+                </span>
+              </div>
+            </div>
+            <div class="md:flex space-y-2 justify-between mt-5">
+              <div class="flex gap-2 md:gap-4">
+                <div class="size-5 mt-1 rounded border border-primary">
+                  <span class="flex items-center justify-center h-full">
+                    <i
+                      class="fa-solid fa-check font-thin text-xs text-primary"
+                    ></i>
+                  </span>
+                </div>
+                <p class="text-primary max-w-[28ch]">
+                  Order within
+                  <span class="font-bold text-sm">09 hours and 54 minutes</span>
+                  to get between
+                  <span class="font-bold text-sm">20th - 27th</span>
+                </p>
+              </div>
+              <a href="" class="underline text-lg text-primary text-nowrap mt-1"
+                >Buying Bulk?</a
+              >
+            </div>
+            <div class="space-y-4 mt-5">
+              <p class="font-medium flex items-center gap-4">
+                <i class="fa-solid fa-car-side text-primary"></i> Tracked
+                Shipping on All Orders
+              </p>
+              <p class="font-medium flex items-center gap-4">
+                <i class="fa-regular fa-calendar-days text-primary"></i> 14-Day
+                Returns
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-16 space-y-4">
+          <h5 class="text-xl font-semibold">Description</h5>
+          <ul class="list-disc px-8 space-y-4">
+            <li class="text-gray-700">
+              New Improved T2 reads up to 200g by 0.1 Also Weighs in oz. dwt
+              ozt.
+            </li>
+            <li class="text-gray-700">
+              New Improved T2 reads up to 200g by 0.1 Also Weighs in oz. dwt
+              ozt.
+            </li>
+            <li class="text-gray-700">
+              New Improved T2 reads up to 200g by 0.1 Also Weighs in oz. dwt
+              ozt.
+            </li>
+            <li class="text-gray-700">
+              New Improved T2 reads up to 200g by 0.1 Also Weighs in oz. dwt
+              ozt.
+            </li>
+          </ul>
+          <hr class="text-gray-300" />
+        </div>
+        <div class="mt-8 space-y-4">
+          <h5 class="text-xl font-semibold">Shipping and Returns</h5>
+          <ul class="list-disc px-8 space-y-4">
+            <li class="text-gray-700">
+              New Improved T2 reads up to 200g by 0.1 Also Weighs in oz. dwt
+              ozt.
+            </li>
+            <li class="text-gray-700">
+              New Improved T2 reads up to 200g by 0.1 Also Weighs in oz. dwt
+              ozt.
+            </li>
+            <li class="text-gray-700">
+              New Improved T2 reads up to 200g by 0.1 Also Weighs in oz. dwt
+              ozt.
+            </li>
+            <li class="text-gray-700">
+              New Improved T2 reads up to 200g by 0.1 Also Weighs in oz. dwt
+              ozt.
+            </li>
+          </ul>
+          <hr class="text-gray-300" />
+        </div>
+        <div class="mt-8 space-y-4">
+          <h5 class="text-xl font-semibold">Customer Reviews</h5>
+          <h6>Excellent scale for <200g loads</h6>
+          <div class="space-y-2">
+            <p class="text-gray-700">
+              Excellent scale for <200g loads. Quick to calibarte, and responds
+              quickly, although the auto-shut-of function can annoying whn
+              measuring very small increments i.e.0.01g --> 0.05g>
+            </p>
+            <i class="fa-solid fa-star text-primary"></i>
+            <i class="fa-solid fa-star text-primary"></i>
+            <i class="fa-solid fa-star text-primary"></i>
+            <i class="fa-solid fa-star text-primary"></i>
+            <i class="fa-solid fa-star text-primary"></i>
+            <span class="px-2 font-bold">5</span>
+          </div>
+          <hr class="text-gray-300" />
+        </div>
+        <div class="mt-8 space-y-4">
+          <h5 class="text-xl font-semibold">Five Stars</h5>
+          <div class="space-y-2">
+            <p class="text-gray-700">Awesome scale - works fantastic</p>
+            <i class="fa-solid fa-star text-primary"></i>
+            <i class="fa-solid fa-star text-primary"></i>
+            <i class="fa-solid fa-star text-primary"></i>
+            <i class="fa-solid fa-star text-primary"></i>
+            <i class="fa-solid fa-star text-primary"></i>
+            <span class="px-2 font-bold">5</span>
+          </div>
+          <hr class="text-gray-300" />
+        </div>
+        <div class="mt-8 space-y-4">
+          <h5 class="text-xl font-semibold">Broken</h5>
+          <div class="space-y-2">
+            <p class="text-gray-700">
+              No it would not calibrate right at all and I tried to send it back
+              and I can't Waste of money and time. Not saying everything is like
+              that just that scale
+            </p>
+            <i class="fa-regular fa-star text-primary"></i>
+            <i class="fa-regular fa-star text-primary"></i>
+            <i class="fa-regular fa-star text-primary"></i>
+            <i class="fa-regular fa-star text-primary"></i>
+            <i class="fa-solid fa-star text-primary"></i>
+            <span class="px-2 font-bold">1</span>
+          </div>
+          <hr class="text-gray-300" />
+        </div>
+      </section>
+    </main>
+    <!-- footer section -->
+    <footer class="bg-[#f1f1f1] pt-10 mt-16 md:mt-20">
+      <section class="container mx-auto px-4 lg:px-0">
+        <div class="grid lg:grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <h4 class="text-primary font-semibold text-xl">INFO</h4>
+            <div>
+              <div class="flex gap-3 items-center">
+                <i class="fa-solid fa-mobile-retro text-primary"></i>
+                <p class="text-gray-700 text-[15px]">+44 1655 2455555</p>
+              </div>
+              <p class="px-6 text-gray-700 text-[15px]">24/7 Support</p>
+            </div>
+            <p class="flex items-center gap-3">
+              <i class="fa-regular fa-envelope text-primary"></i
+              ><span class="text-gray-700 text-[15px]">info@navafresh.eu</span>
+            </p>
+            <div class="space-y-1">
+              <p class="flex items-center gap-3">
+                <i class="fa-regular fa-flag text-primary"></i
+                ><span class="text-gray-700 text-[15px]"> NavaFresh, </span>
+              </p>
+              <p class="px-6 text-gray-700 text-[15px]">
+                Handeine Global Limited,
+              </p>
+              <p class="px-6 text-gray-700 text-[15px] leading-7">
+                Hygeia Building Rear Ground Floor, 66-68 College Road, Harrow,
+                Middlesex HA1 1BE, United Kingdom
+              </p>
+            </div>
+            <div class="mt-8 space-y-2">
+              <p class="text-gray-700">
+                Subscribe to our Newsletter to receive updates, access to
+                exclusive deals, and more.
+              </p>
+              <div class="flex md:static absolute left-3">
+                <input
+                  class="outline-0 bg-white focus:border-primary truncate lg:w-sm border-gray-300 md:py-2 py-1 px-4 focus:border-2 border border-r-0 rounded-l-md"
+                  type="search"
+                  placeholder="What are you looking for?"
+                />
+                <button
+                  class="bg-primary flex items-center md:text-lg font-medium gap-3 text-white md:px-6 md:py-2 py-1 px-2 rounded-r-md truncate"
+                >
+                  <i class="fa-solid fa-mobile-retro mt-1 text-sm md:text-base"></i>
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4 mt-12 md:mt-8 lg:mt-0">
+            <div>
+              <h6 class="text-primary font-semibold text-xl uppercase">
+                Categories
+              </h6>
+              <ul
+                class="flex flex-col space-y-2 mt-4 text-gray-700 text-[15px]"
+              >
+                <a href="">Nuturiton</a
+                ><a href="">Grocery</a
+                ><a href="">Beverages</a
+                ><a href="">Personal Care</a
+                ><a href="">Health Care</a
+                ><a href="">Gifting</a>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-primary font-semibold text-xl uppercase">
+                policies
+              </h6>
+              <ul
+                class="flex flex-col space-y-2 mt-4 text-gray-700 text-[15px]"
+              >
+                <a href="" class="truncate">Shopping and Delivery Policy</a
+                ><a href="">Retrun and Refund Policy</a
+                ><a href="">Payment Policy</a
+                ><a href="">Covid19 Policy</a
+                ><a href="">Privacy Policy</a
+                ><a href="">Terms and Conditions</a>
+              </ul>
+            </div>
+            <div>
+              <h6 class="text-primary font-semibold text-xl uppercase">
+                support
+              </h6>
+              <ul
+                class="flex flex-col space-y-2 mt-4 text-gray-700 text-[15px]"
+              >
+                <a href="">About Us</a
+                ><a href="">Contact Us</a
+                ><a href="">Bulk Order</a
+                ><a href="">Track Your Order</a
+                ><a href="">FAQ</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-6 text-gray-300" />
+        <div class="my-10">
+          <aside class="flex flex-wrap items-center justify-between">
+            <p class="text-gray-400">© 2022 NavaFresh-Europe.</p>
+            <div class="flex gap-2 mt-4 md:mt-0">
+              <i
+                class="fa-brands fa-google-pay text-gray-500 border px-1 rounded cursor-pointer text-lg"
+              ></i>
+              <i
+                class="fa-brands fa-apple-pay text-gray-500 border px-1 rounded cursor-pointer text-lg"
+              ></i>
+              <i
+                class="fa-brands fa-google-pay text-gray-500 border px-1 rounded cursor-pointer text-lg"
+              ></i>
+              <i
+                class="fa-brands fa-apple-pay text-gray-500 border px-1 rounded cursor-pointer text-lg"
+              ></i>
+              <i
+                class="fa-brands fa-google-pay text-gray-500 border px-1 rounded cursor-pointer text-lg"
+              ></i>
+            </div>
+          </aside>
+        </div>
+        <hr class="text-gray-300" />
+      </section>
+      <section class="bg-white py-4 mt-8 px-4 lg:px-6">
+        <div class="md:flex justify-between">
+        <div class="flex gap-3">
+          <img class="size-12" src="./assets/drink2.jpg" alt="" />
+          <div>
+            <h6 class="font-semibold">
+              Quand lock.
+              <span class="text-gray-700 font-medium"
+                >Quand lock Sports Armband</span
+              >
+            </h6>
+            <i class="fa-solid fa-star text-primary text-xs"></i>
+            <i class="fa-solid fa-star text-primary text-xs"></i>
+            <i class="fa-solid fa-star text-primary text-xs"></i>
+            <i class="fa-solid fa-star text-primary text-xs"></i>
+            <i class="fa-regular fa-star text-primary text-xs"></i>
+            <span class="px-2 font-bold">4.0</span>
+          </div>
+        </div>
+        <div class="lg:flex items-center gap-16 mt-4 md:mt-0">
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="space-x-6">
+              <span class="border border-gray-300 rounded space-x-4 px-4 py-2">
+                <i
+                  class="fa-solid fa-minus text-primary cursor-not-allowed"
+                ></i>
+                <span
+                  class="border px-10 border-gray-300 py-2 font-semibold bg-white"
+                  >1</span
+                >
+                <i class="fa-solid fa-plus cursor-pointer text-primary"></i>
+              </span>
+            </div>
+            <div>
+              <h1>
+                <span class="text-xl font-bold text-primary">$49.00 </span>
+                <span class="text-gray-500 text-sm"> $75.00</span>
+              </h1>
+              <span class="text-gray-700 text-sm"> Save 12.0%($ 26.00) </span>
+            </div>
+          </div>
+          <button
+            class="py-1 mt-4 lg:mt-0 cursor-pointer px-6 bg-primary text-white rounded text-lg font-medium"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+      </section>
+    </footer>
+    <!-- script swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./script/script.jsx"></script>
+  </body>
+</html>
